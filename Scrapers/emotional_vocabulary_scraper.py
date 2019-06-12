@@ -2,6 +2,9 @@ import requests
 
 from bs4 import BeautifulSoup
 
+from scraper_functions import fd_lookup
+
+
 url= 'https://www.verywellfamily.com/feelings-words-from-a-to-z-2086647'
 
 request = requests.get(url)
@@ -29,5 +32,6 @@ for c in soup.select("div p:nth-of-type(1)"):
     if start_string in c.text:
         start_flag=True
 
-print (words)
+for word in words:
+    print (word+ " : "+ fd_lookup(word))
     
