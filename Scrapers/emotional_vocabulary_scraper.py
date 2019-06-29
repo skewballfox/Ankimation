@@ -33,5 +33,7 @@ for c in soup.select("div p:nth-of-type(1)"):
         start_flag=True
 
 for word in words:
-    print (word+ " : "+ fd_lookup(word))
+    #print (word+ " : "+ fd_lookup(word))
+    print (word)
+    print (fd_lookup(word))
     

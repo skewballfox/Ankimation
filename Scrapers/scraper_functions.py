@@ -18,11 +18,25 @@ def open_html(path):
 def fd_lookup(word, type='adj'):
     base_url  = "https://www.thefreedictionary.com/"
     query_url = base_url + word
-    print(query_url)
     request = requests.get(query_url)
     soup = BeautifulSoup(request.content, 'html.parser')
-    
-    return soup.find_all('div', {'class':'ds-list', 'b':"1."})
+    print('finding sections')
+    #NOTE: check for existence of h2 in section, as only definitions
+    #have it. 
+    for item in soup.find_all('section', 'data-src'):
+            print (item.text)
+    for item in soup.find_all('div', {'class':'ds-list'}):
+        #check for existence in order to avoid error
+        #note could probably be moved to inside try catch block
+        if item.find('b') is not None:
+                if '1.' in item.find('b').text:
+                        try: 
+                                print (item.contents[next(i for i, content in enumerate(item.contents) if '1.' in content.text)+1])
+                        except AttributeError:
+                                print("the tested content isn't text")
+                                
+
+
 #Definition > section:nth-child(2) > div:nth-child(3) > div:nth-child(5)
 if __name__=="__main__":
     print(fd_lookup("angry"))
