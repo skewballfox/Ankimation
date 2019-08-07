@@ -1,6 +1,7 @@
 import markdown
 from bs4 import BeautifulSoup
 import re
+import random
 import genanki
 
 
@@ -26,8 +27,6 @@ def get_section(soup,outline, section_name):
             break
         elif type(item) == type(section_name):
             section.append(item)
-            print(item)
-            print(type(item))
     return section
 
 def set_text(line,q_set=None):
@@ -45,32 +44,28 @@ def set_text(line,q_set=None):
         line="//"+line
         formatter=''
         q_flag=False
-        print("yeet")
     delimiters=("//","@@","$$","!!", "££")
     splitter='|'.join(map(re.escape,delimiters))
     text_sets=[(s+formatter) for s in re.split(splitter,line) if s!='']
-    print(text_sets)
     #get the indexes for the delimiters to determine their order
     #use the indexes to sort the delimters
     #also removes the delimiters not found in string
     indexes=[(d,line.find(d)) for d in delimiters if line.find(d)!=-1]
     n=0
-    print(indexes)
+    
     term=text_sets[0]
     front=''
     #sort using second column, use order as key for dictionary of text
     while indexes:
         k=min(indexes, key = lambda t: t[1])
         if q_flag is True:
-            print(k[0])
-            print(text_sets[n])
             q_set[k[0]]=text_sets[n]
         else:
             if k[0]=="//":
                 front=q_set[k[0]].format(text_sets[n])+"?"
             elif k[0]=="$$":
                 #using this to make cloze deletion card
-                front=q_set[k[0]].replace("()","{}").format(term,"{{"+text_sets[n]+"}}")
+                front=q_set[k[0]].replace("()","{}").format(term,"{{c1::"+text_sets[n]+"}}")
                 c_set.append(("cloze",front,None))    
             else:
                 back=q_set[k[0]].format(text_sets[n])
@@ -78,10 +73,8 @@ def set_text(line,q_set=None):
         n+=1
         indexes.pop(indexes.index(k))
     if q_flag is True:
-        print(q_set)
         return q_set
     else:
-        print(c_set)
         return c_set
 
 """def set_text(line, q_set):
@@ -97,8 +90,8 @@ def set_text(line,q_set=None):
     
     
 
-def build_deck(soup, outline):
-    print("starting build_deck")
+def build_cards(soup, outline):
+    print("starting build_cards")
     deck_name=outline[0].text
     n=0
     end_section=False
@@ -106,21 +99,37 @@ def build_deck(soup, outline):
         deck_set=[]
         section=get_section(soup, outline, outline[n])
         for line in section:
-            print(line.text, type(line.text))
+
             if (line.text).startswith("//"):
                 q_set=set_text(line.text)
             else:
                 cards=set_text(line.text,q_set)
-                print(cards)
                 deck_set+=cards
         n+=1
         for i in deck_set:
             print(i)
         if n==2:
             end_section=True
-            
+    return deck_set
+
+def make_cards(deck,note_set):
+    for item in note_set:
+        if item[0]=='reversible_model':
+            note=genanki.Note(
+                model=reversible_model,
+                fields=[item[1],item[2]]
+            )
+        if item[0]=='cloze':
+            note=genanki.Note(
+                model=cloze
+            )
 
 if __name__=="__main__":
     soup=get_soup("/home/daedalus/gdrive/Notes/HTML5.md")
+    
+    html5_definitions_deck=genanki.Deck( 
+        (random.randrange(1<<30, 1<<31)), 'HTML5 Definitions' 
+        )
     outline=get_outline(soup)
-    build_deck(soup,outline)
+    card_set=build_cards(soup,outline)
+    make_cards(html5_definitions_deck, card_set)
