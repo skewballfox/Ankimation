@@ -1,0 +1,722 @@
+<table role="table">
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Description</th>
+      <th>ALT&nbsp;+&nbsp;key</th>
+      <th>CTRL&nbsp;+&nbsp;key</th>
+      <th>g&nbsp;key&nbsp;(goto)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>a</th>
+      <td>insert after selected text</td>
+      <td>select whole object</td>
+      <td></td>
+      <td>last buffer</td>
+    </tr>
+    <tr>
+      <th>A</th>
+      <td>insert at line end</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>b</th>
+      <td>select to previous word start</td>
+      <td>select to previous WORD start</td>
+      <td>scroll one page up</td>
+      <td>window bottom</td>
+    </tr>
+    <tr>
+      <th>B</th>
+      <td>extend to previous word start</td>
+      <td>extend to previous WORD start</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>c</th>
+      <td>change selected text</td>
+      <td>change selected text without yanking</td>
+      <td></td>
+      <td>window center</td>
+    </tr>
+    <tr>
+      <th>C</th>
+      <td>copy selection on next lines</td>
+      <td>copy selection on previous lines</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>d</th>
+      <td>erase selected text</td>
+      <td>erase selected text without yanking</td>
+      <td>scroll one half page down</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>D</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>e</th>
+      <td>select to next word end</td>
+      <td>select to next WORD end</td>
+      <td></td>
+      <td>buffer end</td>
+    </tr>
+    <tr>
+      <th>E</th>
+      <td>extend to next word end</td>
+      <td>extend to next WORD end</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>f</th>
+      <td>select to next character included</td>
+      <td>select to previous character included</td>
+      <td>scroll one page down</td>
+      <td>file</td>
+    </tr>
+    <tr>
+      <th>F</th>
+      <td>extend to next character included</td>
+      <td>extend to previous character included</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>g</th>
+      <td>go to location</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>G</th>
+      <td>extend to location</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>h</th>
+      <td>move left</td>
+      <td>select to line begin</td>
+      <td>(<a class="internal present" href="/mawww/kakoune/wiki/Ambiguous-Keys">ambiguous</a>)</td>
+      <td>line begin</td>
+    </tr>
+    <tr>
+      <th>H</th>
+      <td>extend left</td>
+      <td>extend to line begin</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>i</th>
+      <td>insert before selected text</td>
+      <td>select inner object</td>
+      <td><a class="internal present" href="/mawww/kakoune/wiki/Ambiguous-Keys">jump forward in jump list</a></td>
+      <td>line begin (non blank)</td>
+    </tr>
+    <tr>
+      <th>I</th>
+      <td>insert at line begin</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>j</th>
+      <td>move down</td>
+      <td>join lines</td>
+      <td>(<a class="internal present" href="/mawww/kakoune/wiki/Ambiguous-Keys">ambiguous</a>)</td>
+      <td>buffer bottom</td>
+    </tr>
+    <tr>
+      <th>J</th>
+      <td>extend down</td>
+      <td>join lines and select spaces</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>k</th>
+      <td>move up</td>
+      <td>keep selections matching given regex</td>
+      <td></td>
+      <td>buffer top</td>
+    </tr>
+    <tr>
+      <th>K</th>
+      <td>extend up</td>
+      <td>keep selections not matching given regex</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>l</th>
+      <td>move right</td>
+      <td>select to line end</td>
+      <td>force screen redraw</td>
+      <td>line end</td>
+    </tr>
+    <tr>
+      <th>L</th>
+      <td>extend right</td>
+      <td>extend to line end</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>m</th>
+      <td>select to next matching character</td>
+      <td>select to previous matching character</td>
+      <td>(<a class="internal present" href="/mawww/kakoune/wiki/Ambiguous-Keys">ambiguous</a>)</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>M</th>
+      <td>extend to next matching character</td>
+      <td>extend to previous matching character</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>n</th>
+      <td>select next current search pattern match</td>
+      <td>select previous current search pattern match</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>N</th>
+      <td>extend with next current search pattern match</td>
+      <td>extend with previous current search pattern match</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>o</th>
+      <td>insert on new line below</td>
+      <td>add a new empty line below</td>
+      <td>jump backward in jump list</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>O</th>
+      <td>insert on new line above</td>
+      <td>add a new empty line above</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>p</th>
+      <td><a class="internal present" href="/mawww/kakoune/wiki/Registers---Clipboard">paste after selected text</a>
+      </td>
+      <td>paste every yanked selection after selected text</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>P</th>
+      <td><a class="internal present" href="/mawww/kakoune/wiki/Registers---Clipboard">paste before selected text</a>
+      </td>
+      <td>paste every yanked selection before selected text</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>q</th>
+      <td>replay recorded macro</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Q</th>
+      <td>start or end macro recording</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>r</th>
+      <td>replace with character</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>R</th>
+      <td>replace selected text with paired yanked text</td>
+      <td>replace selected text with all yanked texts</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>s</th>
+      <td>select regex matches in selected text</td>
+      <td>split selected text on line ends</td>
+      <td>push current selections in jump list</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>S</th>
+      <td>split selected text on regex matches</td>
+      <td>select first and last characters of each selections</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>t</th>
+      <td>select to next character</td>
+      <td>select to previous character</td>
+      <td></td>
+      <td>window top</td>
+    </tr>
+    <tr>
+      <th>T</th>
+      <td>extend to next character</td>
+      <td>extend to previous character</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>u</th>
+      <td>undo</td>
+      <td>move backward in history</td>
+      <td>scroll one half page up</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>U</th>
+      <td>redo</td>
+      <td>move forward in history</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>v</th>
+      <td>manipulate view</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>V</th>
+      <td>lock view mode</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>w</th>
+      <td>select to next word start</td>
+      <td>select to next WORD start</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>W</th>
+      <td>extend to next word start</td>
+      <td>extend to next WORD start</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>x</th>
+      <td>select line</td>
+      <td>extend selections to whole lines</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>X</th>
+      <td>extend line</td>
+      <td>crop selections to whole lines</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>y</th>
+      <td><a class="internal present" href="/mawww/kakoune/wiki/Registers---Clipboard">yank (copy) selected text</a>
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Y</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>z</th>
+      <td>restore selections</td>
+      <td><a class="internal present" href="/mawww/kakoune/wiki/Selections-combinations">combine selections from
+          register</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Z</th>
+      <td>save selections</td>
+      <td><a class="internal present" href="/mawww/kakoune/wiki/Selections-combinations">combine selections to
+          register</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th colspan="5">external shell commands</th>
+    </tr>
+    <tr>
+      <th>!</th>
+      <td>insert command output</td>
+      <td>append command output</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>$</th>
+      <td>pipe each selection through shell command and keep the ones whose command succeed</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>|</th>
+      <td>pipe each selection through filter and replace with output</td>
+      <td>pipe each selection through command and ignore output</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th colspan="5"><a class="internal present" href="/mawww/kakoune/wiki/Indentation-and-Tabulation">align /
+          indent</a></th>
+    </tr>
+    <tr>
+      <th>&amp;</th>
+      <td>align cursors</td>
+      <td>copy indentation</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>@</th>
+      <td>convert tabs to spaces</td>
+      <td>convert spaces to tabs</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>&lt;</th>
+      <td>deindent</td>
+      <td>deindent, not including incomplete indent</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>&gt;</th>
+      <td>indent</td>
+      <td>indent, including empty lines</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th colspan="5">selections</th>
+    </tr>
+    <tr>
+      <th>%</th>
+      <td>select whole buffer</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>(</th>
+      <td>rotate main selection backward</td>
+      <td>rotate selections content backward</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>)</th>
+      <td>rotate main selection forward</td>
+      <td>rotate selections content forward</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>;<br>semicolon</th>
+      <td>reduce selections to their cursor</td>
+      <td>swap cursors and anchors</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>_</th>
+      <td>trim selections</td>
+      <td>merge contiguous selections together</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th colspan="5">search</th>
+    </tr>
+    <tr>
+      <th>*</th>
+      <td>set search pattern to main selection content</td>
+      <td>set search pattern to main selection content, do not detect words</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>/</th>
+      <td>select next given regex match</td>
+      <td>select previous given regex match</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>?</th>
+      <td>extend with next given regex match</td>
+      <td>extend with previous given regex match</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th colspan="5">text-objects</th>
+    </tr>
+    <tr>
+      <th>[</th>
+      <td>select to object start</td>
+      <td>select to inner object start</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>]</th>
+      <td>select to object end</td>
+      <td>select to inner object end</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>{</th>
+      <td>extend to object start</td>
+      <td>extend to inner object start</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>}</th>
+      <td>extend to object end</td>
+      <td>extend to inner object end</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th colspan="5">text case</th>
+    </tr>
+    <tr>
+      <th>`</th>
+      <td>convert to lower case</td>
+      <td>swap case</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>~</th>
+      <td>convert to upper case</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th colspan="5"></th>
+    </tr>
+    <tr>
+      <th>,</th>
+      <td>user mappings</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>.</th>
+      <td>repeat last insert command</td>
+      <td>repeat last object or t/f selection command</td>
+      <td></td>
+      <td>last buffer change</td>
+    </tr>
+    <tr>
+      <th>\</th>
+      <td>disable hooks</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>:</th>
+      <td>enter command prompt</td>
+      <td>ensure cursor is after anchor</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>"</th>
+      <td>choose register</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>'</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>#</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>^</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>-</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>=</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>+</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th colspan="5"></th>
+    </tr>
+    <tr>
+      <th>Up</th>
+      <td>move up</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Down</th>
+      <td>move down</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Left</th>
+      <td>move left</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Right</th>
+      <td>move right</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Home</th>
+      <td>select to line begin</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>End</th>
+      <td>select to line end</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>PageDown</th>
+      <td>scroll one page down</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>PageUp</th>
+      <td>scroll one page up</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Space</th>
+      <td>remove all selections except main</td>
+      <td>remove main selection</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Backspace</th>
+      <td>remove count</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Escape</th>
+      <td>end macro recording</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Return</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Tab</th>
+      <td>often interpreted as ctrl+i</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>

@@ -2,6 +2,12 @@ import requests
 from typing import Any
 from bs4 import BeautifulSoup as bs
 
+"""
+this is a collection of functions useful for scraping, if you find yourself 
+doing something more than once, feel free to add a function to take care of
+it here. 
+"""
+
 
 def get_soup(url) -> Any:
     request = requests.get(url)
@@ -23,7 +29,17 @@ def save_html(html, filename):
         f.write(html)
 
 
-def fd_lookup(word, type="adj"):
+# not done yet
+"""
+def get_table():
+    table_headers=table_header.find_all('th')
+    for i,header in enumerate(table_headers):
+        table_headers[i]=header
+        print(header.contents[0])
+"""
+
+
+def freedict_lookup(word, type="adj"):
     base_url = "https://www.thefreedictionary.com/"
     query_url = base_url + word
     request = requests.get(query_url)
