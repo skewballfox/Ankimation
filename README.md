@@ -44,6 +44,11 @@ git update-index --skip-worktree src/scratchpad.ipynb
 
 also, for this reason, i'd recommend saving scratchpad under a new filename(`ctrl-shift-s`) when writing a scraper, so that you have an already configured fresh start when writing another one.
 
+## Decks built with this project
+
+- [kakoune anki deck](https://ankiweb.net/shared/info/1810165731)
+- more to come
+
 ## Useful Links
 
 - [Beautiful Soup's documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
