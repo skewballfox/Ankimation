@@ -1,6 +1,6 @@
 # Ankimation
 
-an anki automation starter pack
+an anki automation starter pack.
 
 ## Dependencies (so far)
 
@@ -22,7 +22,7 @@ or use your system package manager to install these things
 just open the scratchpad in vscode(requires jupyter notebook extension) and either:
 
 1. paste the url of the page you want to scrape
-2. use inspect element in your browser, copy the region you are interested in, and save it to an html file
+2. use [inspect element](https://blog.devmountain.com/how-to-use-inspect-element-jump-into-what-makes-a-web-page-tick/) in your browser, copy the region you are interested in, and save it to an html file
 
 then fire away, if you want to see an example of it in action open the kakoune-example and run the entire notebook.
 
